@@ -25,7 +25,7 @@ public class Thread1 extends Thread {
         while (true) {
             if (shareDaTa.getTotal() < 100 && shareDaTa.getTotal() > -100) {
                 int number = rd.nextInt(100);
-                System.out.println("L1:"+number);
+                System.out.println("Number:"+number);
                 shareDaTa.add(number);
                 System.out.println("Total:" + shareDaTa.getTotal());
             } else {

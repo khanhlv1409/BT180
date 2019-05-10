@@ -6,6 +6,8 @@
 package bt180.BT180;
 
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -25,6 +27,11 @@ public class Thread2 extends Thread{
                 System.out.println("Total:" + shareDaTa.getTotal());
             } else {
                 this.stop();
+            }
+            try {    
+                this.sleep(500);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Thread2.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
